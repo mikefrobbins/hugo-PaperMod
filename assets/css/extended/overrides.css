@@ -1,0 +1,26 @@
+/* Make pages wider */
+main {
+  --main-width: 1000px;
+}
+
+/* Colorful headers and branding */
+.post-header, .post-content, .post-footer {
+  --secondary: green;
+}
+
+/* Colorful headers and branding for dark mode */
+.dark :where(.post-header, .post-content, .post-footer) {
+  --secondary: orange;
+}
+
+/* Colorful links when hovering over them */
+a:hover {
+  color: var(--secondary);
+  transition-duration: 70ms;
+}
+
+/* Separate footer items with the pipe symbol */
+
+body > footer > span:nth-child(2)::before {
+  content: "| ";
+}
